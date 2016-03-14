@@ -1,0 +1,97 @@
+.hjitb .selectize-input,
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+textarea,
+.btn {
+    @include box-shadow($boxshadow);
+}
+
+// tab links
+.nav-tabs > {
+    li > a {
+        border-color: $nav-tabs-border-color;
+        border-top: 3px solid $nav-tabs-border-color;
+        margin-right: 0.75em;
+        &:hover {
+            border-color: $nav-tabs-border-color;
+            border-top-color: $brand-primary;
+        }
+    }
+    // makes the active link have top highlight
+    li.active > a,
+    li.active > a:hover,
+    li.active > a:focus {
+        border-top: 3px solid $brand-primary;
+    }
+}
+
+.black-text {
+    color: $black;
+}
+
+a,
+.btn {
+    @include transition(all 0.35s ease-in-out);
+}
+
+label {
+    margin-right: 5px;
+}
+
+// titles for the individual rIDX snippets
+a.listing-title {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+    h4 {
+        color: $black;
+        @include pretty_hover(none, $brand-primary-dark-20, ease 0.35s);
+    }
+}
+
+.tab-content,
+.banner .top-header,
+ul.nav.nav-tabs,
+.navbar-default,
+.hji-home-value-form.widget,
+.quick-search-widget-wrapper {
+    @include no_borders;
+}
+
+// makes the rIDX listings grid 3/4 width centered on the screen on $screen-xs
+.idx-results {
+    @include mobile_landscape {
+        margin: auto;
+        width: 75%;
+    }
+}
+
+// applies the tab_styling mixin to tabs
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    @include tab_styling;
+}
+
+// forces the save search button to have a grey background on IOS
+input.save-search-btn.btn {
+    background-color: #C0C0C0;
+}
+
+// overrriding the button margins on ipads
+@media (max-width: 1200px) and (min-width: 768px) {
+    .rel-listing-wrap .btn-wrapper > div,
+    .idx-results .idx-result-snippet .btn-wrapper > div {
+        margin: 2% 4%;
+    }
+}
+
+// overriding button margins in quicksearch wrapper
+.quick-search-widget-wrapper.horizontal .hji-action-buttons-wrap {
+    @media(min-width: $screen-sm) {
+        margin-top: 0;
+    }
+}

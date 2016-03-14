@@ -1,0 +1,241 @@
+h3.widget-title,
+.widget-title h3 {
+    border-bottom: 2px solid rgba($black, 0.25);
+    letter-spacing: 5px;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+}
+
+// pins the slideshow to the bottom of the header
+.blvd-slideshow {
+    top: inherit;
+}
+
+// hides the sharing buttons on the homepage
+.home .addtoany_share_save_container {
+    display: none;
+}
+
+.upper-cta-wrapper {
+    margin-top: 25rem;
+    @media (min-width: 480px) {
+        margin-top: 35rem;
+    }
+}
+
+// the two CTAs over the slideshow
+.upper-cta-title {
+    background-color: rgba($brand-primary, 0.85);
+    border: 4px solid $white;
+    color: $white;
+    letter-spacing: 2px;
+    padding: 2rem 0;
+    -webkit-transition: ease 0.5s;
+    transition: ease 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+        text-shadow: $brand-primary-dark-20 5px 5px 10px;
+    }
+}
+
+// removing hover behavior from CTA links
+.upper-cta-link {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+/*
+ * BEGIN $grid-styles
+ * these styles govern neighborhood grid on the homepage
+*/
+
+.neighborhood-grid-wrapper {
+    margin-top: 20rem;
+    @media (min-width: $screen-sm) {
+        margin-top: 25rem;
+    }
+    @media (min-width: $screen-md) {
+        margin-top: 30rem;
+    }
+    // targetting only desktop chrome
+    @media screen and (min-width: $screen-lg) and (-webkit-min-device-pixel-ratio: 0) {
+        margin-top: 25rem;
+    }
+}
+
+// the whole grid wrapper
+.ch-grid {
+    padding: 0;
+    text-align: center;
+    &:after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    // the subtitles under the photos
+    h4 {
+        margin-top: 2rem;
+    }
+}
+
+// the container holding each item
+.ch-grid li {
+    display: inline-block;
+    margin: 1rem;
+    width: 100%;
+    @media (min-width: 480px) {
+        width: 75%;
+    }
+    @media (min-width: $screen-lg) {
+        width: initial;
+    }
+}
+
+// the container with the pictures as background images
+.ch-item {
+    background-size: cover;
+    box-shadow: inset 0 0 0 16px rgba(217, 210, 198, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+        // displays the "learn more" box
+        .ch-info {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    &:before {
+        content: '';
+        display: table;
+    }
+}
+
+// the "learn more" box that shows up on hover
+.ch-info {
+    background: $brand-primary;
+    height: inherit;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.ch-info h4 {
+    color: $white;
+    font-size: 21px;
+    height: 90px;
+    margin: 0 30px;
+    padding: 35px 0 0 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 1px $white, 0 1px 2px rgba($black, 0.3);
+}
+
+.ch-info p {
+    border-top: 1px solid rgba($white, 0.65);
+    color: rgba($white, 0.9);
+    display: block;
+    margin: auto;
+    padding-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    width: 50%;
+    &:hover,
+    &:active,
+    &:focus {
+        color: rgba($brand-second, 0.8);
+        text-decoration: none;
+    }
+}
+
+// setting all the cta images
+.ch-item.bodega-bay {
+    background-image: url("/wp-content/uploads/2015/12/Bodega-Bay.jpg");
+}
+
+.ch-item.bodega-harbour {
+    background-image: url("/wp-content/uploads/2015/12/Bodega-Harbour.jpg");
+}
+
+.ch-item.dillon-beach {
+    background-image: url("/wp-content/uploads/2015/06/Dillon_Beach_Marin_County_CA.jpg");
+}
+
+.ch-item.jenner {
+    background-image: url("/wp-content/uploads/2014/12/Jenner-small.png");
+}
+
+.ch-item.sea-ranch {
+    background-image: url("/wp-content/uploads/2015/05/Sea_Ranch_CA_Real_Estate.jpg");
+}
+
+.ch-item.timber-cove {
+    background-image: url("/wp-content/uploads/2014/12/Timber-Cove-small.png");
+}
+
+.ch-item.sonoma-county {
+    background-image: url("/wp-content/uploads/2015/05/Sea_Ranch_CA_Real_Estate.jpg");
+}
+
+.ch-item.lots-land {
+    background-image: url("/wp-content/uploads/2015/10/hiking.png");
+}
+
+/*
+ * END $grid-styles
+*/
+
+// sets the background attachment as a normal image on mobile & parallax on desktop
+.homepage-parallax {
+    background-attachment: scroll;
+    background-image: url(#{$home_widget_parallax});
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 3em 0;
+    position: relative;
+    @media (min-width: 480px) {
+        height: 400px;
+    }
+    @media (min-width: $screen-lg) {
+        background-attachment: fixed;
+    }
+}
+
+.parallax-copy-wrapper {
+    margin-top: 10rem;
+    @media (min-width: $screen-lg) {
+        margin-top: 15rem;
+    }
+}
+
+h2.parallax-title {
+    color: $white;
+    font-size: 5rem;
+    text-shadow: $black 5px 5px 10px;
+    @media (min-width: $screen-sm) {
+        font-size: 6rem;
+    }
+}
+
+h3.parallax-subtitle {
+    color: $white;
+    font-size: 3rem;
+    font-style: italic;
+    text-shadow: $black 5px 5px 10px;
+    @media (min-width: $screen-sm) {
+        font-size: 4rem;
+    }
+}

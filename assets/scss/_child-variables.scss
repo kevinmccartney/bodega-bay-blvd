@@ -1,0 +1,23 @@
+/**
+ * Child Theme Variables
+ * Use this file to override any variables that are set in the compiler
+ * Becuase the compiler uses the !default attribute for all variable declarations
+ *
+ * Use this to specify variables that cannot be changed.
+ */
+
+$brand-primary: #63717F;
+$brand-second: #C6E2FF;
+$brand-third: #FFF;
+
+$brand-primary-light-10: lighten($brand-primary, 10%);
+$brand-primary-light-20: lighten($brand-primary, 20%);
+$brand-primary-dark-10: darken($brand-primary, 10%);
+$brand-primary-dark-20: darken($brand-primary, 20%);
+
+$white: #FFF;
+$black: #000;
+$grey: #808080;
+
+$home-widget-parallax: none !default;
+$boxshadow: 3px 3px 4px 0 rgba( $black, 0.25 );

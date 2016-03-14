@@ -1,0 +1,73 @@
+// the company name above everything else
+h2.footer-company-title {
+    color: $white;
+    letter-spacing: 4px;
+    text-shadow: $brand-primary-dark-20 2px 2px 4px;
+}
+
+// centers all text in the footer
+.footer-widgets.row {
+    text-align: center;
+}
+
+// social media icons
+#footer .socialmedia-footer {
+    font-size: 3.5rem;
+    text-align: center;
+    .social-link {
+        color: $brand-second;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $brand-primary-dark-10;
+        }
+    }
+}
+
+.fa-footer {
+    font-size: 4rem;
+    margin: 0 0.5%;
+}
+
+// the footer contact section
+.footer-contact {
+    font-size: 1.5rem;
+    a.footer-contact-link {
+        color: $brand-second;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $brand-primary-dark-10;
+        }
+    }
+}
+
+// the copyright below the footer
+footer #copyright {
+    background-color: darken($brand-primary, 10%);
+    margin: 2rem auto 0 auto;
+    padding: 2rem 0;
+    .hji-powered a {
+        color: $brand-second;
+    }
+}
+
+// aligning the IDX compliance text with the copyright text in the footer
+#idx-footer-compliance {
+    color: $brand-second;
+    background-color: $brand-primary-dark-10;
+    width: 100%;
+    .hjitb.idx-compliance {
+        margin: auto;
+        @media (min-width: $screen-sm) {
+            padding: 0 15px;
+            width: 750px;
+        }
+        @media (min-width: $screen-md) {
+            width: 970px;
+        }
+        @media (min-width: $screen-lg) {
+            width: 1170px;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.banner .top-header {
+    @media (min-width: $screen-sm) {
+        margin-top: 0.5rem;
+        padding-bottom: 0;
+    }
+}
+
+// adds a button appearance to the sign in link but only on screen sizes 
+// large enough that it won't overlap text when logged in
+.user-signup-header a.hji-user-signup {
+    @media (min-width: $screen-sm) {
+        background-color: $brand-primary;
+        border-radius: 2rem;
+        color: $white;
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $brand-primary-light-10;
+            text-decoration: none;
+        }
+    }
+}
+
+// the social media icons in the header
+.socialmedia-header {
+    font-size: 3rem;
+    text-align: right;
+    a {
+        color: $brand-primary;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $brand-primary-light-10;
+            text-decoration: none;
+        }
+    }
+    .fa {
+        padding: 0 0.5rem;
+    }
+}
+
+.banner .header-widgets .blvd-logo,
+.banner .header-widgets .blvd-responsive-menu {
+    margin: 10px 0;
+}
+
+// explicitly setting logo width to avoid responsiveness issues
+img#site-logo {
+    width: 175px;
+}
+
+// adds a hover effect to the submenus
+.blvd-responsive-menu .dropdown-menu > li > a {
+    @media (min-width: $grid-float-breakpoint) {
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $brand-primary;
+            color: $white;
+        }
+    }
+}
+
+h3.header-copy-title {
+    font-family: 'open sans', Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h4.header-copy-subtitle {
+    font-family: 'open sans', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+// the hamburger menu toggle on mobile
+.navbar-default .navbar-toggle {
+    background-color: $brand-primary;
+    border: 0;
+    .icon-bar {
+        background-color: $white;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $brand-primary-light-10;
+        border: 0;
+    }
+}
+
+// adds a border to the bottom of the header
+header.banner.navbar {
+    border-bottom: 5px solid $brand-primary;
+}

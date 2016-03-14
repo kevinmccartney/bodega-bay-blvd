@@ -1,0 +1,38 @@
+// a mixin for a custom hover effect. Can set several properties related to link hover behavior.
+// uncomment the commented lines for even more functionality.
+@mixin pretty_hover($pretty_decoration, $pretty_color, $pretty_trans) {
+    -webkit-transition: $pretty_trans;
+    transition: $pretty_trans;
+    &:hover,
+    &:active {
+        // background-color: $pretty_bg_color !important;
+        color: $pretty_color !important;
+        text-decoration: $pretty_decoration;
+        // text-shadow: $pretty_shadow;
+   
+    }
+}
+
+@mixin no_borders {
+    border: 0;
+}
+
+// this mixin styles the Bootstrap active tabs
+@mixin tab_styling {
+    @include no_borders;
+    background-color: $brand-primary;
+    text-shadow: $brand-primary-dark-20 2px 2px 4px;
+    color: $white;
+}
+
+// So in Bootstrap 4, there will be a $screen-xs AND $screen-xxs, so $screen-xs will
+// take over the functionality of this mixin
+// https://github.com/twbs/bootstrap/issues/14504
+// Until then, I made this.
+@mixin mobile_landscape {
+    $mobile_landscape_min: 480px;
+    $mobile_landscape_max: 767px;
+    @media (min-width: $mobile_landscape_min) and (max-width: $mobile_landscape_max) {
+        @content;
+    }
+}

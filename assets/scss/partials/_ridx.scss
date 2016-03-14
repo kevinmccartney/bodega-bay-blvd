@@ -1,0 +1,49 @@
+// Single Listing View
+.ridx-single {
+    // fixes button shadows
+    .tools-panel {
+        .btn {
+            @include box-shadow(none);
+        }
+        @media (min-width: $screen-md) {
+            @include box-shadow($boxshadow);
+        }
+    }
+    // the property details next to the photo
+    .idx-secondary-item {
+        padding: 0 0.33em;
+        &:nth-child(odd) {
+            background-color: change-color($body-background-color, $body-background-color, 4%);
+        }
+    }
+    // the main listing photo & virtual tour button
+    .photo-wrap {
+        position: relative;
+        .vt-wrap {
+            background-color: rgba($brand-second, 0.8);
+            border-radius: $border-radius-base;
+            left: 1em;
+            padding: 0.5em 1em;
+            position: absolute;
+            top: 1em;
+            a {
+                color: $black;
+                &:hover {
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                background-color: $brand-second;
+            }
+        }
+    }
+    // sizing and title for the slideshow
+    .slider-wrapper {
+        margin-top: 0.75em;
+        &:before {
+            content: 'Additional Photos';
+            font-size: 2rem;
+        }
+    }
+}

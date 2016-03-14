@@ -1,0 +1,40 @@
+// makes a top & bottom margin on all page content not on the homepage
+body:not(.home) #content {
+    background-color: $white;
+    box-shadow: $black 1px 2px 20px;
+    margin: 5rem auto;
+    padding: 2rem;
+}
+
+h1.page-title {
+    letter-spacing: 0.05em;
+}
+
+// makes a border between posts on post archive pages
+article.post {
+    border-top: solid 1px rgba($black, 0.25);
+    padding-top: 20px;
+    &:first-child {
+        border-top: none;
+    }
+}
+
+// the read more link on post archive pages
+.read-more-link {
+    margin: 15px 0 0 0;
+}
+
+// the image in the Bodega Bay geofarm copy
+.geofarm-custom-img.salmon-creek {
+    background-image: url("/wp-content/uploads/2014/12/Salmon-Creek-small.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// standard geofarms featured image
+.hji-areas-featured-image {
+    text-align: center;
+    img {
+        padding: 5%;
+    }
+}
