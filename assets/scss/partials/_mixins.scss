@@ -21,8 +21,8 @@
 @mixin tab_styling {
     @include no_borders;
     background-color: $brand-primary;
-    text-shadow: $brand-primary-dark-20 2px 2px 4px;
     color: $white;
+    text-shadow: $brand-primary-dark-20 2px 2px 4px;
 }
 
 // So in Bootstrap 4, there will be a $screen-xs AND $screen-xxs, so $screen-xs will

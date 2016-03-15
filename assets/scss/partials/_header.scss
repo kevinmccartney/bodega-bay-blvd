@@ -81,7 +81,7 @@ h4.header-copy-subtitle {
 // the hamburger menu toggle on mobile
 .navbar-default .navbar-toggle {
     background-color: $brand-primary;
-    border: 0;
+    @include no_borders;
     .icon-bar {
         background-color: $white;
     }
@@ -89,7 +89,6 @@ h4.header-copy-subtitle {
     &:focus,
     &:active {
         background-color: $brand-primary-light-10;
-        border: 0;
     }
 }
 
