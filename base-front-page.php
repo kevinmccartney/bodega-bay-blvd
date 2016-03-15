@@ -29,22 +29,12 @@
                     <?php do_action( 'hji_theme_before_content' ); ?>
                     
                     <div id="content" class="<?php echo hji_theme_main_class(); ?>" role="main">
-                        
-                        <?php if( is_page_template( 'template-homepage.php' ) ) : ?>
-                            
-                            <?php include_once( 'template-homepage.php' ); ?>
-                       
-                        <?php else : ?>
                             
                             <?php do_action( 'hji_theme_before_content_col' ); ?>
                             
                             <?php include hji_theme_template_path(); ?>
                             
                             <?php do_action( 'hji_theme_after_content_col' ); ?>
-                            
-                            <?php get_template_part( 'templates/cta-boxes' ); ?>
-                        
-                        <?php endif; ?>
                     
                     </div>
                 

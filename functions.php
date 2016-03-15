@@ -9,10 +9,11 @@ if ( !defined( 'HJI_BLVD_SCSS' ) ) :
     define( 'HJI_BLVD_SCSS', true );
 endif;
 
+
+/**
+ * Override main theme widget areas
+ */
 if ( !function_exists( 'hji_bodega_bay_widgets' ) ) :
-    /**
-     * Override main theme widget areas
-     */
     function hji_bodega_bay_widgets() {
         register_sidebar( array(
             'id'            => 'erba-upper-homewidgets',
@@ -41,29 +42,35 @@ if ( !function_exists( 'hji_bodega_bay_widgets' ) ) :
     add_action( 'widgets_init', 'hji_bodega_bay_widgets', 11 );
 endif;
 
+/**
+ * Put the social links in the header
+ */
 if ( !function_exists( 'hji_social_header_links' ) ) :
-    /**
-    * Put the social links in the header
-    */
     function hji_social_header_links() {
         global $hji_theme_options;
         $links = hji_social_media_links();
         $output = '<div class="socialmedia-header">' . $links . '</div>';
         echo $output;
     }
-}
+endif;
 
-if ( !function_exists( 'hji_bodega_bay_enqueue_scripts' ) ) {
-    function hji_bodega_bay_enqueue_scripts() {
-        wp_enqueue_script( 'hji_bodega_bay_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js' );
-    }
-    add_action( 'wp_enqueue_scripts', 'hji_bodega_bay_enqueue_scripts' );
-}
-
-if ( !function_exists( 'hji_bodega_bay_load_fonts' ) ) {
+/**
+ * Loading in extra fonts
+ */
+if ( !function_exists( 'hji_bodega_bay_load_fonts' ) ) :
     function hji_bodega_bay_load_fonts() {
         wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,700' );
     }
     add_action( 'wp_enqueue_scripts', 'hji_bodega_bay_load_fonts' );
 
+endif;
+
+/**
+ * loading in child theme js
+ */
+if ( !function_exists( 'hji_bodega_bay_enqueue_scripts' ) ) :
+    function hji_bodega_bay_enqueue_scripts() {
+        wp_enqueue_script( 'hji_bodega_bay_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js' );
+    }
+    add_action( 'wp_enqueue_scripts', 'hji_bodega_bay_enqueue_scripts' );
 endif;
