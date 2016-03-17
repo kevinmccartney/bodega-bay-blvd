@@ -38,3 +38,9 @@ article.post {
         padding: 5%;
     }
 }
+
+// the submit button on the testimonials page
+p.submit-testimonial input {
+    @extend .btn;
+    @extend .btn-primary;
+}
